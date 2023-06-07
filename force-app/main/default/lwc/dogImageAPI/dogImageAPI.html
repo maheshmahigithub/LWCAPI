@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Random Dog Image Generator">
+        <div class="slds-m-around_medium">
+            <template if:true={dogImageUrl}>
+                <img src={dogImageUrl} alt="Dog Image" width="300" />
+            </template>
+            <template if:false={dogImageUrl}>
+                <p>Loading dog image...</p>
+            </template>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button label="Fetch New Image" variant="brand" onclick={fetchNewImage}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

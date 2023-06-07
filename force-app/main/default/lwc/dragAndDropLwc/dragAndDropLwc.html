@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="All Opportunities">
+    <div class="slds-grid slds-wrap card_wrapper">
+        <template for:each={pickVals} for:item="item">
+            <div class="slds-col slds-size_1-of-12 stageContainer" key={item}>
+                <h1 class="column_heading">{item}</h1>
+                <c-drag-and-drop-list records={records} stage={item}
+                 onlistitemdrag={handleListItemDrag}
+                 onitemdrop={handleItemDrop}
+                 ></c-drag-and-drop-list>
+            </div>
+            
+        </template> 
+    </div>
+    </lightning-card>
+</template>
